@@ -1,22 +1,10 @@
 
 #navigation {
     background: #000000;
-    height: 50px;
-    width: 100%;
-    padding: 15px;
 }
 
 .navigation-item {
-    display: inline;
-    margin-right: 2%;
 }
 
 .navigation-item a {
-   color: azure;
-   text-decoration: none;
-   padding-right: 30px;
-   padding-left: 30px;
-   padding-top: 15px;
-   padding-bottom: 15px;
-   background: #c04b4b
 }

@@ -1,5 +1,11 @@
 // Register the nav-bar component
 
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
+
  Vue.component('nav-bar-item', {
   props: ['navitem'],
   template: '<li v-bind:class="[{ active: navitem.isActive }]"><a :href=navitem.url>{{ navitem.text }}</a></li>'
