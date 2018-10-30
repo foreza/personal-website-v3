@@ -1,0 +1,67 @@
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navigation Component -->
+
+    <nav id="navigation">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Jason Chiu</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <nav-bar-item v-for="nav in navList" v-bind:navitem="nav" v-bind:key="nav.id">
+                </nav-bar-item>
+            </ul>
+        </div>
+
+        <ul class="sidenav" id="mobile-nav">
+            <nav-bar-item v-for="nav in navList" v-bind:navitem="nav" v-bind:key="nav.id">
+            </nav-bar-item>
+        </ul>
+
+    </nav>
+
+
+    <!-- INSERT CONTENT HERE -->
+
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <form method="post"><input type="hidden" name="action" value="contact">
+                <div class="form-group"><label>Name:</label><input type="text" name="name.full" class="form-control"></div>
+                <div class="form-group"><label>Email Address:</label><input type="email" name="email" class="form-control"></div>
+                <div class="form-group"><label>Phone Number:</label><input type="text" name="phone" placeholder="(optional)"
+                        class="form-control"></div>
+                <div class="form-group"><label>Contact Reason:</label><select name="enquiryType" class="form-control">
+                        <option value="">(select one)</option>
+                        <option value="question">General Inquiry</option>
+                        <option value="question">Job Proposition</option>
+                        <option value="question">Business Proposition</option>
+                        <option value="message">Give Feedback</option>
+                        <option value="other">Other</option>
+                    </select></div>
+                <div class="form-group"><label>Message</label><textarea name="message" placeholder="Leave Jason a message..."
+                        rows="4" class="form-control"></textarea></div>
+                <div class="form-actions"><button type="submit" class="btn btn-primary">Send</button></div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="nav.js"></script>
+</body>
